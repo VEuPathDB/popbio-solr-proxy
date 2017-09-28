@@ -22,7 +22,7 @@ var validateRequest = function (request, options) {
         queryParams = Object.keys(parsedUrl.query);
 
 
-     //console.log(JSON.stringify(parsedUrl));
+    // console.log(JSON.stringify(parsedUrl));
     // console.log(parsedUrl.pathname);
     // console.log(options.validPaths.indexOf(parsedUrl.pathname));
 
@@ -40,7 +40,7 @@ var validateRequest = function (request, options) {
 var defaultOptions = {
     listenPort: 8000,
     invalidHttpMethods: ['POST'],
-    validPaths: ['/solr/vb_popbio/smplExport', '/solr/vb_popbio/irExport'],
+    validPaths: ['/solr/vb_popbio/smplExport', '/solr/vb_popbio/irExport', '/solr/vb_popbio/abndExport'],
     invalidParams: ['qt', 'stream'],
     backend: {
         host: 'localhost',
