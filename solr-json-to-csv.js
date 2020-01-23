@@ -38,13 +38,13 @@ var validateRequest = function (request, options) {
 
 // default options
 var defaultOptions = {
-    listenPort: 8000,
+    listenPort: process.env.LISTEN_PORT,
     invalidHttpMethods: ['POST'],
     validPaths: ['/solr/vb_popbio/smplExport', '/solr/vb_popbio/irExport', '/solr/vb_popbio/abndExport', '/solr/vb_popbio/genoExport'],
     invalidParams: ['qt', 'stream'],
     backend: {
-        host: 'localhost',
-        port: 7997
+        host: process.env.SOLR_HOST,
+        port: process.env.SOLR_PORT
     },
     validator: validateRequest
 };
