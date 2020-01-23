@@ -1,0 +1,30 @@
+version: '3'
+
+volumes:
+  volume_solrdata_v1:         # Store solr cores' data and configs
+
+services:
+  solr-proxy:
+    build: .
+    image: solr-proxy
+    ports: 
+      - "8000:8000"
+      - "9090:9090"
+    environment:
+      - SOLR_HOST=solr
+      - SOLR_PORT=8983
+      - LISTEN_PORT=8000
+
+  solr:
+    image: solr
+#    labels:
+      #- "traefik.http.routers.solr.rule=Host(`solr.127.0.0.1.xip.io`, `solr.local`)"
+      #- "traefik.http.routers.solr.rule=Host(`solr.10.77.27.16.xip.io`, `solr.local`)"
+      #- "traefik.http.routers.solr.tls=true"
+      #- "traefik.http.routers.solr.entrypoints=websecure"
+    volumes:
+      - volume_solrdata_v1:/var/solr/
+
+
+
+

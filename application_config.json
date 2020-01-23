@@ -1,0 +1,23 @@
+[
+  {
+    // solr-json-to-csv
+    "uid": "solr-json-to-csv",
+    "append": true,
+    "watch": true,
+    "fifo": true,
+    "script": "solr-json-to-csv.js",
+    "sourceDir": "/home/node/solr-json-to-csv"
+  },
+  {
+    // security-proxy
+    "uid": "security-proxy",
+    "append": true,
+    "watch": true,
+    "fifo": true,
+    "script": "solr-security-proxy.js",
+    "sourceDir": "/home/node/node_modules/solr-security-proxy/",
+    "args": ["--port", "9090", 
+             "--backendPort", "8080", 
+             "--validPaths", "solr/vb_ta/smplAc,solr/vb_ta/smplAcat"]
+  }
+]
