@@ -20,7 +20,7 @@ node ('centos8') {
 	sh 'podman build --format=docker -t solr-proxy .'
 
         // push to dockerhub (for now)
-        sh "podman push --creds \"$HUB_LOGIN\" solr docker://docker.io/veupathdb/solr-proxy:${tag}"
+        sh "podman push --creds \"$HUB_LOGIN\" solr-proxy docker://docker.io/veupathdb/solr-proxy:${tag}"
         }
       }
 
