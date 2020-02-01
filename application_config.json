@@ -6,7 +6,11 @@
     "watch": true,
     "fifo": true,
     "script": "solr-json-to-csv.js",
-    "sourceDir": "/home/node/solr-json-to-csv"
+    "sourceDir": "/home/node/solr-json-to-csv",
+    "logFile": "/home/node/logs/solr-json-to-csv/forever.log",
+    "outFile": "/home/node/logs/solr-json-to-csv/out.log",
+    "errFile": "/home/node/logs/solr-json-to-csv/err.log"
+
   },
   {
     // security-proxy
@@ -16,6 +20,9 @@
     "fifo": true,
     "script": "solr-security-proxy.js",
     "sourceDir": "/home/node/node_modules/solr-security-proxy/",
+    "logFile": "/home/node/logs/solr-security-proxy/forever.log",
+    "outFile": "/home/node/logs/solr-security-proxy/out.log",
+    "errFile": "/home/node/logs/solr-security-proxy/err.log",
     "args": ["--port", "9090", 
              "--backendHost", "solr",
              "--backendPort", "8983",
