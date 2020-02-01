@@ -13,4 +13,7 @@ RUN npm install forever -g
 COPY application_config.json /home/node/
 
 USER node
+EXPOSE 8000
+EXPOSE 9090
+
 CMD forever application_config.json
