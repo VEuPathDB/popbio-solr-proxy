@@ -1,0 +1,25 @@
+version: '3'
+
+volumes:
+  volume_solrdata_v1:         # Store solr cores' data and configs
+
+services:
+  solr-proxy:
+    build: .
+    image: solr-proxy
+    ports: 
+      - "8000:8000"
+      - "9090:9090"
+    environment:
+      - SOLR_HOST=solr
+      - SOLR_PORT=8983
+      - LISTEN_PORT=8000
+
+  solr:
+    image: solr
+    volumes:
+      - volume_solrdata_v1:/var/solr/
+
+
+
+

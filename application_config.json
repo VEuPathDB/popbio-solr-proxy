@@ -1,0 +1,24 @@
+[
+  {
+    // solr-json-to-csv
+    "uid": "solr-json-to-csv",
+    "append": true,
+    "watch": true,
+    "fifo": true,
+    "script": "solr-json-to-csv.js",
+    "sourceDir": "/home/node/solr-json-to-csv"
+  },
+  {
+    // security-proxy
+    "uid": "security-proxy",
+    "append": true,
+    "watch": true,
+    "fifo": true,
+    "script": "solr-security-proxy.js",
+    "sourceDir": "/home/node/node_modules/solr-security-proxy/",
+    "args": ["--port", "9090", 
+             "--backendHost", "solr",
+             "--backendPort", "8983",
+             "--validPaths", "/solr/vb_ta/smplAc,/solr/vb_ta/smplAcat,/solr/vb_ta/smplAcgrouped,/solr/vb_ta/irAc,/solr/vb_ta/irAcat,/solr/vb_ta/irAcgrouped,/solr/vb_ta/abndAc,/solr/vb_ta/abndAcat,/solr/vb_ta/abndAcgrouped,/solr/vb_popbio/smplGeoclust,/solr/vb_popbio/smplMarkers,/solr/vb_popbio/smplTable,/solr/vb_popbio/smplPalette,/solr/vb_popbio/smplCloud,/solr/vb_popbio/irGeoclust,/solr/vb_popbio/irMarkers,/solr/vb_popbio/irTable,/solr/vb_popbio/irPalette,/solr/vb_popbio/irCloud,/solr/vb_popbio/irBeeswarm,/solr/vb_popbio/irViolin,/solr/vb_popbio/irViolinStats,/solr/vb_popbio/abndGeoclust,/solr/vb_popbio/abndMarkers,/solr/vb_popbio/abndTable,/solr/vb_popbio/abndPalette,/solr/vb_popbio/abndCloud,/solr/vb_popbio/abndBeeswarm,/solr/vb_popbio/abndViolin,/solr/vb_popbio/abndViolinStats,/solr/genea_expression/irGeoclust,/solr/vb_popbio/abndMarkerYearRange,/solr/vb_popbio/abndGraphdata,/solr/vb_popbio/genoPalette,/solr/vb_popbio/genoGeoclust,/solr/vb_popbio/genoTable,/solr/vb_popbio/genoExport,/solr/vb_ta/genoAc,/solr/vb_ta/genoAcat,/solr/vb_ta/genoAcgrouped,/solr/vb_popbio/projectsCoordinates,/solr/vb_popbio/pathGeoclust,/solr/vb_popbio/pathPalette,/solr/vb_ta/pathAc,/solr/vb_ta/pathAcat,/solr/vb_ta/pathAcgrouped,/solr/vb_popbio/pathTable,/solr/vb_popbio/pathMarkerYearRange,/solr/vb_popbio/pathGraphdata,/solr/vb_popbio/mealGeoclust,/solr/vb_popbio/mealPalette,/solr/vb_popbio/mealGraphdata,/solr/vb_popbio/mealMarkerYearRange,/solr/vb_popbio/mealExport,/solr/vb_popbio/mealTable,/solr/vb_ta/mealAc,/solr/vb_ta/mealAcat,/solr/vb_ta/mealAcgrouped"]
+  }
+]
