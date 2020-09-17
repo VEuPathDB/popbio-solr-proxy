@@ -40,7 +40,7 @@ var validateRequest = function (request, options) {
 var defaultOptions = {
     listenPort: process.env.LISTEN_PORT,
     invalidHttpMethods: ['POST'],
-  validPaths: ['/solr/vb_popbio/smplExport', '/solr/vb_popbio/irExport', '/solr/vb_popbio/abndExport', '/solr/vb_popbio/genoExport', '/solr/vb_popbio/pathExport', '/solr/vb_popbio/mealExport'],
+    validPaths: ['/solr/covid_main/abndExport'],
     invalidParams: ['qt', 'stream'],
     backend: {
         host: process.env.SOLR_HOST,
@@ -72,7 +72,7 @@ var options = defaultOptions;
 // };
 
 
-app.get('/solr/vb_popbio/*', function (req, res, next) {
+app.get('/solr/covid_main/*', function (req, res, next) {
     // console.log(req.url);
     var parsedUrl = url.parse(req.originalUrl, true),
         path = parsedUrl.pathname,

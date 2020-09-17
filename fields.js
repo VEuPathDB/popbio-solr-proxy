@@ -179,17 +179,6 @@ module.exports = {
             name: 'exp_dev_stages_ss',
             label: 'Developmental stage',
             quoted: true
-        },
-        //DKDK VB-8663 add geolocation_provenance_s & geolocation_precision_s for Export
-        {
-            name: 'exp_geolocation_provenance_s',
-            label: 'Geolocation provenance',
-            quoted: true
-        },
-        {
-            name: 'exp_geolocation_precision_s',
-            label: 'Geolocation precision',
-            quoted: true
         }
     ],
     smpl: [
@@ -305,53 +294,17 @@ module.exports = {
             name: 'exp_signposts_ss',
             label: 'Available data types',
             quoted: true
-        },
-        //DKDK VB-8663 add geolocation_provenance_s & geolocation_precision_s for Export
-        {
-            name: 'exp_geolocation_provenance_s',
-            label: 'Geolocation provenance',
-            quoted: true
-        },
-        {
-            name: 'exp_geolocation_precision_s',
-            label: 'Geolocation precision',
-            quoted: true
         }
     ],
     abnd: [
         {
-            name: 'exp_sample_id_s',
-            label: 'Sample ID',
-            quoted: false
-        },
-        {
-            name: 'exp_bundle_name_s',
-            label: 'Record type',
-            quoted: false
-        },
-        {
-            name: 'exp_species_s',
-            label: 'Species',
-            quoted: false
-        },
-        {
-            name: 'exp_sample_type_s',
-            label: 'Sample type',
-            quoted: false
-        },
-        {
-            name: 'exp_label_s',
-            label: 'Label',
-            quoted: true
-        },
-        {
-            name: 'exp_collection_assay_id_s',
-            label: 'Collection ID',
+            name: 'exp_accession_s',
+            label: 'Case ID',
             quoted: false
         },
         {
             name: 'exp_collection_date_range_ss',
-            label: 'Collection date range',
+            label: 'Date',
             quoted: true,
             filter: function (dates) {
                 var newDates = [];
@@ -363,19 +316,28 @@ module.exports = {
             }
         },
         {
-            name: 'exp_collection_protocols_ss',
-            label: 'Collection protocols',
+            name: 'exp_sex_s',
+            label: 'Sex',
+            quoted: false
+        },
+        {
+            name: 'exp_geo_resolution_s',
+            label: 'Geographic resolution',
+            quoted: false
+        },
+        {
+            name: 'exp_age_orig_s',
+            label: 'Age (raw)',
             quoted: true
         },
         {
-            name: 'exp_projects_ss',
-            label: 'Projects',
+            name: 'exp_age_ranges_s',
+            label: 'Age (processed)',
             quoted: true
         },
-        //DKDK VB-8369 separating Coordinates into Lat & Long
         {
             name: 'exp_geo_coords_s',
-            label: 'Latitudes',
+            label: 'Latitude',
             quoted: true,
             filter: function (coord) {
                 var latitude = coord.split(',')[0];
@@ -384,68 +346,12 @@ module.exports = {
         },
         {
             name: 'exp_geo_coords_s',
-            label: 'Longitudes',
+            label: 'Longitude',
             quoted: true,
             filter: function (coord) {
                 var longitude = coord.split(',')[1];
                 return longitude
             }
-        },
-        {
-            name: 'exp_geolocations_ss',
-            label: 'Locations',
-            quoted: true
-        },
-        {
-            name: 'exp_sample_size_i',
-            label: 'Specimens collected',
-            quoted: false
-        },
-        {
-            name: 'exp_collection_duration_days_i',
-            label: 'Collection duration (days)',
-            quoted: false
-        },
-        {
-            name: 'exp_citations_ss',
-            label: 'Citations',
-            quoted: true
-        },
-        {
-            name: 'exp_tags_ss',
-            label: 'Tag',
-            quoted: true
-        },
-        {
-            name: 'exp_attractants_ss',
-            label: 'Attractants',
-            quoted: true
-        },
-        {
-            name: 'exp_licenses_ss',
-            label: 'Usage license',
-            quoted: true
-        },
-        {
-            name: 'exp_sex_s',
-            label: 'Sex',
-            quoted: false
-        },
-        {
-            name: 'exp_dev_stages_ss',
-            label: 'Developmental stage',
-            quoted: true
-        },
-        //DKDK VB-8663 add geolocation_provenance_s & geolocation_precision_s for Export
-        {
-            name: 'exp_geolocation_provenance_s',
-            label: 'Geolocation provenance',
-            quoted: true
-        },
-        {
-            name: 'exp_geolocation_precision_s',
-            label: 'Geolocation precision',
-            quoted: true
         }
     ],
     geno: [
@@ -604,17 +510,6 @@ module.exports = {
         {
             name: 'exp_dev_stages_ss',
             label: 'Developmental stage',
-            quoted: true
-        },
-        //DKDK VB-8663 add geolocation_provenance_s & geolocation_precision_s for Export
-        {
-            name: 'exp_geolocation_provenance_s',
-            label: 'Geolocation provenance',
-            quoted: true
-        },
-        {
-            name: 'exp_geolocation_precision_s',
-            label: 'Geolocation precision',
             quoted: true
         }
     ],
@@ -776,17 +671,6 @@ module.exports = {
             name: 'exp_dev_stages_ss',
             label: 'Developmental stage',
             quoted: true
-        },
-        //DKDK VB-8663 add geolocation_provenance_s & geolocation_precision_s for Export
-        {
-            name: 'exp_geolocation_provenance_s',
-            label: 'Geolocation provenance',
-            quoted: true
-        },
-        {
-            name: 'exp_geolocation_precision_s',
-            label: 'Geolocation precision',
-            quoted: true
         }
     ],
     meal: [
@@ -935,17 +819,6 @@ module.exports = {
         {
             name: 'exp_dev_stages_ss',
             label: 'Developmental stage',
-            quoted: true
-        },
-        //DKDK VB-8663 add geolocation_provenance_s & geolocation_precision_s for Export
-        {
-            name: 'exp_geolocation_provenance_s',
-            label: 'Geolocation provenance',
-            quoted: true
-        },
-        {
-            name: 'exp_geolocation_precision_s',
-            label: 'Geolocation precision',
             quoted: true
         }
     ],
