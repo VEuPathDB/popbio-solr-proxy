@@ -60,7 +60,7 @@ module.exports = {
                 var newDates = [];
                 for (var i = 0, len = dates.length; i < len; i++) {
                     // console.dir(dates[i])
-                    newDates.push(dates[i].replace(/[\[\]]/g, ''));
+                    newDates.push(dates[i].replace(/[\[\]]/g, '').replace(/ TO /, '/'));
                 }
                 return newDates
             }
@@ -231,7 +231,7 @@ module.exports = {
                 var newDates = [];
                 for (var i = 0, len = dates.length; i < len; i++) {
                     // console.dir(dates[i])
-                    newDates.push(dates[i].replace(/[\[\]]/g, ''));
+                    newDates.push(dates[i].replace(/[\[\]]/g, '').replace(/ TO /, '/'));
                 }
                 return newDates
             }
@@ -357,7 +357,7 @@ module.exports = {
                 var newDates = [];
                 for (var i = 0, len = dates.length; i < len; i++) {
                     // console.dir(dates[i])
-                    newDates.push(dates[i].replace(/[\[\]]/g, ''));
+                    newDates.push(dates[i].replace(/[\[\]]/g, '').replace(/ TO /, '/'));
                 }
                 return newDates
             }
@@ -492,7 +492,7 @@ module.exports = {
                 var newDates = [];
                 for (var i = 0, len = dates.length; i < len; i++) {
                     // console.dir(dates[i])
-                    newDates.push(dates[i].replace(/[\[\]]/g, ''));
+                    newDates.push(dates[i].replace(/[\[\]]/g, '').replace(/ TO /, '/'));
                 }
                 return newDates
             }
@@ -673,7 +673,7 @@ module.exports = {
                 var newDates = [];
                 for (var i = 0, len = dates.length; i < len; i++) {
                     // console.dir(dates[i])
-                    newDates.push(dates[i].replace(/[\[\]]/g, ''));
+                    newDates.push(dates[i].replace(/[\[\]]/g, '').replace(/ TO /, '/'));
                 }
                 return newDates
             }
@@ -838,7 +838,7 @@ module.exports = {
                 var newDates = [];
                 for (var i = 0, len = dates.length; i < len; i++) {
                     // console.dir(dates[i])
-                    newDates.push(dates[i].replace(/[\[\]]/g, ''));
+                    newDates.push(dates[i].replace(/[\[\]]/g, '').replace(/ TO /, '/'));
                 }
                 return newDates
             }
