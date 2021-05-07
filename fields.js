@@ -336,6 +336,21 @@ module.exports = {
             quoted: true
         },
         {
+            name: 'exp_case_confirmation_s',
+            label: 'Case confirmation type',
+            quoted: true
+        },
+        {
+            name: 'exp_occupation_s',
+            label: 'Occupation',
+            quoted: true
+        },
+        {
+            name: 'exp_outcome_s',
+            label: 'Outcome',
+            quoted: true
+        },
+        {
             name: 'exp_geo_coords_s',
             label: 'Latitude',
             quoted: true,
