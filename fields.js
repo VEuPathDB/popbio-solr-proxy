@@ -351,6 +351,11 @@ module.exports = {
             quoted: true
         },
         {
+            name: 'exp_country_s',
+            label: 'Country',
+            quoted: true
+        },
+        {
             name: 'exp_geo_coords_s',
             label: 'Latitude',
             quoted: true,
