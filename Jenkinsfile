@@ -1,27 +1,18 @@
-node ('centos8') {
-    // default tag to latest, only override if branch isn't master.  This
-    // allows the tag to work outside of multibranch (it will just always be
-    // latest in that case)
-    def tag = "latest" 
+#!groovy
 
-    stage('checkout') {
-        checkout scm
-    }
+@Library('pipelib@github-creds')
+import org.veupathdb.lib.Builder
 
-    stage('build') {
-      withCredentials([usernameColonPassword(credentialsId: '0f11d4d1-6557-423c-b5ae-693cc87f7b4b', variable: 'HUB_LOGIN')]) {
+node('centos8') {
+  sh "env"
 
-        // set tag to branch if it isn't master
-        if (env.BRANCH_NAME != 'master') {
-           tag = "${env.BRANCH_NAME}"
-         }
+  def builder = new Builder(this)
 
-        // build the image
-	sh 'podman build --format=docker -t solr-proxy .'
+  checkout scm
 
-        // push to dockerhub (for now)
-        sh "podman push --creds \"$HUB_LOGIN\" solr-proxy docker://docker.io/veupathdb/solr-proxy:${tag}"
-        }
-      }
-
-    }
+  // See the docs at https://github.com/VEuPathDB/pipelib/blob/main/src/org/veupathdb/lib/Builder.groovy#L41
+  builder.buildContainers([
+    [ name: 'solr-proxy' ],
+  ])
+}
+Footer
